@@ -297,6 +297,7 @@ z-index: 0;
   width: 700px;
   max-width: none;
   height: auto;
+  max-height: 400px; 
   left: -140px;        /* bleed off the page */
   top: 40px;           /* adjust */
   pointer-events: none; /* so it won't block clicks */
@@ -383,3 +384,4 @@ z-index: 0;
 .commercial{
   background-color: #F3DE96;
 }
+
