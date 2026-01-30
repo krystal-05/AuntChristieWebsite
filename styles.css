@@ -297,10 +297,15 @@ z-index: 0;
   width: 700px;
   max-width: none;
   height: auto;
-  max-height: 400px; 
   left: -140px;        /* bleed off the page */
   top: 40px;           /* adjust */
   pointer-events: none; /* so it won't block clicks */
+}
+
+@media (max-width: 576px){
+.hose-img{
+  max-height: 400px; 
+}
 }
 
 /* text overlay styling */
