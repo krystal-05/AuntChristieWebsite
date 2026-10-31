@@ -724,12 +724,12 @@ footer {
   }
 }
 
-@media (max-width: 576px) {
-
-  .services-section .row > div {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
+@media (max-width: 767px) {
+    .services-section .row > div {
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: center;
+    }
 }
 /* ==================================================
    DESKTOP SERVICE CARD LAYOUT
