@@ -1,17 +1,14 @@
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // animate once
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
 
-document.querySelectorAll(".fade-in").forEach(element  =>
-  observer.observe(element )
-);
+const carousel = new bootstrap.Carousel('#carouselExampleRide', {
+    interval: 5000,
+    ride: 'carousel',
+    pause: false
+});
+
+
+// automatically update copyright year
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
 

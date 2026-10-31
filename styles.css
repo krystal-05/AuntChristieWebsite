@@ -1,56 +1,70 @@
-/* NAVBAR */
+/* ==================================================
+   GLOBAL / REUSABLE STYLES
+================================================== */
+
+.btn {
+  background-color: #1f3c88;
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.carousel {
+  max-width: 500px;
+  height: auto;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
 .navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 .navbar-brand img {
-  max-height: 80px;  
+  max-height: 80px;
   width: auto;
   padding: 0;
-  transform: scale(1.25);       /* “zoom” effect */
+  transform: scale(1.25);
 }
 
 .nav-link {
- color: #2D4093;
-}
-
-.navbar{
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1050 !important;
+  color: #2d4093;
 }
 
 
+/* ==================================================
+   HERO SECTION
+================================================== */
 
-/* HERO SECTION */
-.hero { position: relative; }
-.hero .hero-bg { position: relative; }
-.hero .hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.hero .hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-}
-.hero .hero-overlay .col-lg-6 {
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  padding: 2rem 1rem;
-}
-@media (max-width: 992px) {
-  .hero .hero-overlay { align-items: flex-start; padding-top: 1.25rem; }
-  .hero .hero-overlay .col-lg-6 { padding: 1rem; }
+.hero {
+  position: relative;
 }
 
-/* Subtle dark gradient over the hero image, sits under the text overlay */
+.hero .hero-bg {
+  position: relative;
+}
+
+.hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark gradient over hero image */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1; /* sits above the image but below .hero-overlay (z-index:2) */
+  z-index: 1;
   pointer-events: none;
+
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.55) 0%,
@@ -60,41 +74,40 @@
   );
 }
 
-/* Slight tweak so overlay content remains on top and readable */
-.hero .hero-overlay { z-index: 2; }
+.hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 
-/* Make gradient less aggressive on small screens */
-@media (max-width: 768px) {
-  .hero::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.55) 0%,
-      rgba(0,0,0,0.35) 40%,
-      rgba(0,0,0,0.1) 100%
-    );
-  }
-  .hero .hero-overlay { text-align: center; }
-  .hero .lead{
-    font-size: 1rem;
-}
+  display: flex;
+  align-items: center;
 }
 
-.btn{
-  background-color: #1f3c88;
-  color: white;
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.25);
-}
-.hero .lead{
-    margin-top: 1rem; 
-    margin-bottom: 1.5rem; 
+.hero .hero-overlay .col-lg-6 {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  padding: 2rem 1rem;
 }
 
-.info-section{
-  color: #2D4093;
-  background-color: #F3DE96;
+.hero .lead {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
+
+/* ==================================================
+   INFORMATION SECTION
+================================================== */
+
+.info-section {
+  color: #2d4093;
+  background-color: #f3de96;
+}
+
+
+/* ==================================================
+   ABOUT SECTION
+================================================== */
 
 .about-img {
   width: 100%;
@@ -104,39 +117,40 @@
 }
 
 .about-text-divider {
-  max-width: 60px; 
-  height: 2px; 
-  background-color: #1f3c88;  
+  max-width: 60px;
+  height: 2px;
   margin: -0.5rem auto 1.5rem;
+
+  background-color: #1f3c88;
   border-radius: 2px;
 }
 
-.ba-text-divider{
-  max-width: 60px;
-  height: 2px;
-  background-color: #1f3c88; 
-  margin: -0.5rem auto 1.5rem;
-  border-radius: 2px;
-}
+
+/* ==================================================
+   BEFORE AND AFTER SECTION
+================================================== */
+
 .before-and-after {
   position: relative;
+  overflow: hidden;
+
   background-image: url("images/waterDroplets.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* keeps overlay tidy */
 }
 
-/* overlay */
+/* White overlay */
 .before-and-after::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.5); /* adjust 0.55–0.75 */
   z-index: 0;
+
+  background: rgba(255, 255, 255, 0.7);
 }
 
-/* keep ALL section content above overlay */
+/* Keep section content above overlay */
 .before-and-after > * {
   position: relative;
   z-index: 1;
@@ -144,58 +158,499 @@
 
 .before-and-after .card.ba-pair {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-
-}
-.ba-text{
-  color: #1f3c88; 
 }
 
-.ba-label{
- color:#1f3c88;
+.ba-text {
+  position: relative;
+  z-index: 1;
+  color: #1f3c88;
 }
-.ba-pair{
+
+.ba-text-divider {
+  max-width: 60px;
+  height: 2px;
+  margin: -0.5rem auto 1.5rem;
+
+  background-color: #1f3c88;
+  border-radius: 2px;
+}
+
+.ba-pair {
   padding: 0.75rem;
   border-radius: 14px;
 }
 
-.ba-img{
+.ba-img {
+  display: block;
   width: 100%;
   aspect-ratio: 9 / 16;
+
   object-fit: cover;
   border-radius: 10px;
-  display: block;
 }
 
-.ba-label{
+.ba-label {
   display: block;
+  margin-bottom: 0.25rem;
+
+  color: #1f3c88;
   text-align: center;
   font-weight: 600;
   font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-.service-area .card-img-top{
-  aspect-ratio: 4/3;
 }
 
-.service-container{     /* show scrollbar when >4 cards */
-  gap: 16px; 
+
+/* ==================================================
+   ALTERNATE BEFORE AND AFTER SECTION
+================================================== */
+
+.beforeandafter {
+  position: relative;
+  overflow: hidden;
+
+  color: #1f3c88;
+  background-image: url("images/waterDroplets.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Flex-row wrapper for cards */
+.beforeandafter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==================================================
+   SERVICE AREA
+================================================== */
+
+.service-area .card-img-top {
+  aspect-ratio: 4 / 3;
+}
+
+.service-container {
+  gap: 16px;
+}
+
 .service-container .card {
   display: flex;
-  gap: 16px;               /* gap between cards */
-  justify-content: flex-center;
+  gap: 16px;
+  justify-content: center;
 }
 
-.service-container .card .card-img-top{
-  aspect-ratio: 16/9;
+.service-container .card .card-img-top {
+  aspect-ratio: 16 / 9;
 }
+
+
+/* ==================================================
+   SERVICES SECTION
+================================================== */
+
+.services-bg {
+    background-color: #f3de96;
+    height: auto;
+    min-height: 0;
+}
+
+.services-bg .row {
+    height: auto;
+    min-height: 0;
+}
+
+.services-bg .card {
+    height: auto;
+}
+.services-section {
+  overflow: hidden;
+  background-color: #f3de96;
+}
+
+.services-section .card {
+  background-color: #f7f9fc;
+  height: auto;
+}
+
+.services {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  color: #2d4093;
+  background-color: #f7f9fc;
+  border: 2px solid #378cf5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.house{
+  max-width: 320px !important;
+}
+.maintenance{
+  max-width: 320px !important;
+}
+.services .card.ba-pair {
+  border: 2px solid #f7f9fc;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.services img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.services h5,
+.services p {
+  overflow-wrap: break-word;
+}
+
+.service-img-1{
+  width: 10vh !important;
+  height: 10vh !important;
+}
+.service-img-2 {
+  width: 10vh !important;
+  height: 10vh !important;
+}
+
+.sa-col {
+  color: #378cf5;
+}
+
+.service-img-full {
+  border-radius: 8px;
+}
+/* Horizontal card scrolling on mobile */
+.services-section .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start !important;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 0 0.5rem 0.5rem;
+}
+
+.services-section .row > div {
+  flex: 0 0 85%;
+  max-width: 85%;
+  scroll-snap-align: center;
+}
+
+
+/* ==================================================
+   ESTIMATE / CONTACT FORM SECTION
+================================================== */
+
+.estimates {
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("images/waterDroplets.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.estimates::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.estimates .card {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.form-elements .form-control {
+  border: 2px solid #378cf5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==================================================
+   MAINTENANCE PAGE HEADER
+================================================== */
+
+.maintenance-header {
+  position: relative;
+
+  background-color: #378cf5;
+  background-image: url("images/waterDroplets.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.maintenance-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.maintenance-header .c1 {
+  z-index: 0;
+}
+
+.maintenance-header h4 {
+  color: #378cf5;
+}
+
+.maintenance-header h3 {
+  color: #1f3c88;
+}
+.maintenance-header h6 {
+  color: #1f3c88;
+}
+
+/* ==================================================
+   HOME 
+================================================== */
+
+.home {
+  background-color: #378cf5;
+}
+
+.home.image-transition {
+  min-height: 420px;
+}
+
+.image-transition {
+  position: relative;
+  height: 120vh;
+
+  background-image: url("images/driveway.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.center-image {
+  position: sticky;
+  top: 120px;
+  left: 50%;
+
+  width: 420px;
+  border-radius: 20px;
+
+  transform: translateX(-50%);
+  transition: opacity 0.4s ease;
+}
+
+/* Hose full-bleed image */
+.hose-img {
+  position: relative;
+  top: 40px;
+  left: -140px;
+
+  width: 700px;
+  max-width: none;
+  height: auto;
+
+  pointer-events: none;
+}
+
+/* Text overlay card */
+.home .text-card {
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.163);
+}
+
+
+/* ==================================================
+   HOUSE WASHING SECTION
+================================================== */
+
+.housewashing {
+  color: #1f3c88;
+  background-color: #f3de96;
+}
+
+
+/* ==================================================
+   BUYING AND SELLING SECTION
+================================================== */
+
+.buying-selling h5,
+.buying-selling h6,
+.buying-selling p {
+  color: #1f3c88;
+}
+
+.for-sale-img {
+  max-width: 250px;
+  height: auto;
+}
+
+
+/* ==================================================
+   COMMERCIAL SECTION
+================================================== */
+
+.commercial {
+  background-color: #f3de96;
+}
+
+.commercial h3,
+.commercial h4,
+.commercial p {
+  color: #1f3c88;
+}
+
+.commercial-img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.storefront{
+  color: #1f3c88;
+}
+
+.parkingLot{  
+  background-color: #f3de96;
+  color: #1f3c88;
+}
+
+.church{
+  color: #1f3c88;
+}
+
+.picnic{
+  background-color: #f3de96;
+  color: #1f3c88;
+}
+
+.bleachers{
+  color: #1f3c88;
+}
+
+/* ==================================================
+   PATIO/ DECK/ WALKWAY SECTION
+================================================== */
+.patio-deck-walkway .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.patio-deck-walkway {
+  overflow: hidden;
+  background-color: #f3de96;
+}
+
+/* Horizontal card scrolling on mobile */
+.patio-deck-walkway .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start !important;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 0 0.5rem 0.5rem;
+}
+
+.patio-deck-walkway .row > div {
+  scroll-snap-align: center;
+}
+
+.patio{
+  color:#1f3c88;
+}
+.deck{
+  background-color: #f3de96;
+  color:#1f3c88;
+}
+.walkway{
+  color: #1f3c88;
+}
+.patio-deck-walkway{
+  color:#1f3c88;
+}
+
+/* ==================================================
+   EQUIPMENT SECTION
+================================================== */
+.equipment{
+  color:#1f3c88;
+}
+.equipment-img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* ==================================================
+   PLOWING SECTION
+================================================== */
+.plowing{
+  color:#1f3c88;
+}
+.plowing-img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  color: white;
+  background-color: #1f3c88;
+  width: 100%;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #64B5F6;
+    text-decoration: underline;
+}
+
+.footer a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.footer i {
+    margin-right: 8px;
+}
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
 
 .fade-in {
   opacity: 0;
   transform: translateY(25px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .fade-in.visible {
@@ -203,190 +658,146 @@
   transform: translateY(0);
 }
 
-.services-bg{
-  background-color: #F3DE96;
-}
-.services{
-  color: #2D4093;
-  /* background-color: white; */
-   background-color: #f7f9fc; 
-     border: 2px solid #378cf5;   /* color */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(20px);
 
-.services .card.ba-pair {
-  border: 2px solid #f7f9fc;  /* soft blue-gray */  /* color */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 
+  will-change: opacity, transform;
 }
 
-.sa-col{
-  color: #378cf5;
-}
-
-.estimates{
-  position: relative;
-  background-image: url("images/waterDroplets.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden; /* keeps overlay tidy */
-}
-
-/* overlay */
-.estimates::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.5); /* adjust 0.55–0.75 */
-  z-index: 0;
-}
-
-.form-elements .form-control{
-  border: 2px solid #378cf5;   /* color */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-
-}
-footer{
-  background-color: #1f3c88;
-  color: white;
-}
-
-.estimates .card{
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+.scroll-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
+/* ==================================================
+   MOBILE RESPONSIVE STYLES
+================================================== */
+@media (max-width: 768px) {
+  .hero .hero-overlay {
+    align-items: flex-start;
+    padding-top: 1.25rem;
+  }
 
-
-
-.maintenace-header{
-    background-color: #378cf5;
-}
-.maintenace-header .c1{
-z-index: 0;
-}
-.home{
-  background-color: #378cf5;
-}
-
-.image-transition{
-  height: 120vh;
-  background-image: url("images/driveway.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  .hero .hero-overlay .col-lg-6 {
+    padding: 1rem;
+  }
 }
 
-.center-image{
-  width: 420px;
-  border-radius: 20px;
-  position: sticky;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity .4s ease;
-}
+@media (max-width: 768px) {
+  .hero::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
 
-.home.image-transition{
-  min-height: 420px;  /* gives room for the image + text */
-}
+  .hero .hero-overlay {
+    text-align: center;
+  }
 
-/* hose full-bleed */
-.hose-img{
-  width: 700px;
-  max-width: none;
-  height: auto;
-  left: -140px;        /* bleed off the page */
-  top: 40px;           /* adjust */
-  pointer-events: none; /* so it won't block clicks */
-}
+  .hero .lead {
+    font-size: 1rem;
+  }
 
-@media (max-width: 576px){
-.hose-img{
-  max-height: 400px; 
-}
-}
-
-/* text overlay styling */
-.home .text-card{
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(6px);
-  border-radius: 16px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.163);
-  position: relative;
-  z-index: 2;
-}
-
-.maintenace-header{
-  position: relative;
-  background-image: url("images/waterDroplets.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* overlay */
-.maintenace-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.5); /* adjust 0.55–0.75 */
-  z-index: 0;
-}
-
-.maintenace-header h1{
-  color:#1f3c88
-}
-
-.maintenace-header h4{
-  color: #378cf5
-}
-
-.maintenace-header h6{
-  color:#1f3c88
-}
-
-.services-section .card{
-  background-color: #f7f9fc;
-}
-
-.services-section{
-  background-color: #F3DE96;
-}
-
-.for-sale-img{
-  max-width: 350px;
-  height: auto;
-}
-@media (max-width: 576px){
-
-  .for-sale-img{
-    max-width: 250px;
+  .carousel {
+    max-width: 350px;
     height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hose-img {
+    max-height: 400px;
+  }
+
+  .for-sale-img {
+    max-width: 225px;
+    height: auto;
+  }
+}
+
+
+/* ==================================================
+   DESKTOP SERVICE CARD LAYOUT
+================================================== */
+
+@media (min-width: 768px) {
+  .services-section .row {
+    flex-wrap: wrap;
+    justify-content: center !important;
+
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .services-section .row > div {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (min-width: 768px){
+  .services-bg .row {
+    display: flex;
+    align-items: stretch;
+  }
+  .services-bg .card {
+    height: 100%;
+  }
+}
+
+@media(min-width: 768px){
+  .house-washing-card{
+    padding-left: 75px !important;
+    padding-right: 75px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .patio-deck-walkway .row {
+    flex-wrap: wrap;
+    justify-content: center !important;
+
+    overflow-x: visible;
+    scroll-snap-type: none;
   }
 
 }
 
-.buying-selling h5{
-    color:#1f3c88;
+
+.christmas{
+  background-color: green;
 }
 
-.buying-selling p{
-    color:#1f3c88;
+.christmas .services{
+  color: green;
+  background-color: #f7f9fc;
+  border: 2px solid  red;
+}
+.christmas .about-text-divider{
+  background-color: red;
 }
 
-.commercial h4{
-  color:#1f3c88;
+.christmas-lights{
+  color: green;
+  background-color: #f7f9fc;
 }
-.commercial h3{
-  color:#1f3c88;
-}
-.commercial p{
-  color:#1f3c88;
+.christmas-lights .about-text-divider{
+  background-color: red;
 }
 
-.commercial{
-  background-color: #F3DE96;
+.christmas-lights h4{
+  color: red;
+  background-color: #f7f9fc;
 }
-
+.christmas-lights img{
+  border-radius: 10px;
+}

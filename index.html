@@ -2,6 +2,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+     <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -33,11 +35,12 @@
               Throughout Northeastern PA
             </p>
 
-         <a href="#estimates" class="btn btn-primary btn-lg">
+             
+         <div class="btn btn-primary btn-lg">
               Contact Us
-         </a>
-
-
+              <script src="contact.js"></script>
+         </div>
+        
           </div>
         </div>
       </div>
@@ -76,73 +79,75 @@
   </div>
 </section>
 
-<section class="before-and-after py-5">
-  <h3 class="fw-bold mb-4 text-center ba-text">See the Difference</h3>
-  <div class="ba-text-divider"></div>
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- Pair 1 -->
-      <div class="col-12 col-lg-6">
-        <div class="card ba-pair">
-          <div class="row g-2">
-            <div class="col-6">
-              <span class="ba-label mb-2">Before</span>
-              <img src="images/before1.png" class="ba-img" alt="Before 1">
-            </div>
-            <div class="col-6">
-              <span class="ba-label mb-2">After</span>
-              <img src="images/after1.png" class="ba-img" alt="After 1">
-            </div>
+<section class="beforeandafter py-5">
+          <div class="ba-text px-3 py-3">
+            <h3 class="fw-bold mb-4 text-center">Transform Your Home</h3>
+             <div class="about-text-divider"></div>
           </div>
+    <div id="carouselExampleRide" class="carousel slide mx-auto">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="images/BA1.png" class="d-block w-100" alt="...">
         </div>
-      </div>
-
-      <!-- Pair 2 -->
-      <div class="col-12 col-lg-6">
-        <div class="card ba-pair">
-          <div class="row g-2">
-            <div class="col-6">
-              <span class="ba-label mb-2">Before</span>
-              <img src="images/before2.png" class="ba-img" alt="Before 2">
-            </div>
-            <div class="col-6">
-              <span class="ba-label mb-2">After</span>
-              <img src="images/after2.png" class="ba-img" alt="After 2">
-            </div>
-          </div>
+        <div class="carousel-item">
+        <img src="images/BA2.png" class="d-block w-100" alt="...">
         </div>
-      </div>
-
+        <div class="carousel-item">
+        <img src="images/BA3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="images/BA4.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="images/BA5.png" class="d-block w-100" alt="...">
+        </div>
+            <div class="carousel-item">
+        <img src="images/BA6.png" class="d-block w-100" alt="...">
+        </div>
+            <div class="carousel-item">
+        <img src="images/BA7.png" class="d-block w-100" alt="...">
+        </div>
+            <div class="carousel-item">
+        <img src="images/BA8.png" class="d-block w-100" alt="...">
+        </div>
+            <div class="carousel-item">
+        <img src="images/BA9.png" class="d-block w-100" alt="...">
+        </div>
     </div>
-  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    </div>
+    </div>
 </section>
 
-<section class="services-bg py-5">
+<section class="services-bg py-4">
   <div class="container">
     <div class="row g-4">
 
       <!-- Services Offered -->
       <div class="col-12 col-lg-6 text-center">
-        <div class="services card ba-pair h-100">
+        <div class="services card ba-pair index">
           <div class="card-body p-4">
         <h3 class="fw-bold mb-4">Services Offered</h3>
         <div class="about-text-divider"></div>
-        <p class="mb-4 text-start">
+        <p class="text-start">
           House Washing | Commercial Cleaning | Roof Cleaning | Gutter Cleaning | Gutter Whitening |
-          Brick Paver Cleaning | Deck and Fence Cleaning | Concrete Cleaning | Window Cleaning |
-          Christmas Light Installation | Snow Plowing | and More
+          Brick Paver Cleaning | Deck and Fence Cleaning | Concrete Cleaning | Christmas Light Installation | Snow Plowing | and More
         </p>
-         <a href="maintenance.html" class="btn btn-primary btn-lg">
-              Learn About Our Maintenance Services
-         </a>
         </div>
         </div>
       </div>
 
       <!-- Service Area -->
       <div class="col-12 col-lg-6 text-center">
-        <div class="services card ba-pair h-100">
+        <div class="services card ba-pair index">
           <div class="card-body p-4">
         <h3 class="fw-bold mb-4">Service Area</h3>
         <div class="about-text-divider"></div>
@@ -150,7 +155,7 @@
         <p class="mb-4 text-start">
           Scranton | Wilkes Barre | Back Mountain | Hunlock Creek | Shickshinny | Berwick | Benton | Hazleton | Pittston | Williamsport | Danville | and More
         </p>
-        <p class="mb-2 text-center sa-col fw-bold">Serving Residential and Commercial Clients</p>
+        <p class="text-center sa-col fw-bold">Serving Residential and Commercial Clients</p>
         </div>
         </div>
       </div>
@@ -159,113 +164,69 @@
   </div>
 </section>
 
-<section class="estimates py-5"  id="estimates">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8 col-xl-6">
-        <div class="card">
-          <div class="card-body p-4 p-md-5">
 
-            <h3 class="fw-bold text-center mb-4">Email Us for a Free Estimate</h3>
+<section class="estimates py-4" id="estimates">
+  
+   <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <div class="services card text-align-left p-4">
 
-            <form class="form-elements row g-3">
-              <!-- Name -->
-              <div class="col-12 col-md-6">
-                <label for="firstName" class="form-label"></label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  class="form-control form-control-lg"
-                  type="text"
-                  placeholder="First Name"
-                  required
-                >
-              </div>
+          <h3 class="text-center mb-4 fw-bold">Request a Free Quote </h3> 
+          
+          <form id="contact-form">
+        <div class="about-text-divider"></div>
+        <!-- Name -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control"
+                   id="name" required>
+        </div>
 
-              <div class="col-12 col-md-6">
-                <label for="lastName" class="form-label"></label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  class="form-control form-control-lg"
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                >
-              </div>
+        <!-- Phone -->
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control"
+                   id="phone" required>
+        </div>
 
-              <!-- Contact -->
-              <div class="col-12 col-md-6">
-                <label for="email" class="form-label"></label>
-                <input
-                  id="email"
-                  name="email"
-                  class="form-control form-control-lg"
-                  type="email"
-                  placeholder="Email"
-                  required
-                >
-              </div>
+        <!-- Job Site Address -->
+        <div class="mb-3">
+            <label for="address" class="form-label">Job Site Address</label>
+            <input type="text" class="form-control"
+                   id="address" required>
+        </div>
 
-              <div class="col-12 col-md-6">
-                <label for="phone" class="form-label"></label>
-                <input
-                  id="phone"
-                  name="phone"
-                  class="form-control form-control-lg"
-                  type="tel"
-                  placeholder="Cell Phone"
-                  required
-                >
-              </div>
+        <!-- Additional Information -->
+        <div class="mb-3">
+            <label for="additional-info" class="form-label">
+                Additional Information
+            </label>
 
-              <!-- Address -->
-              <div class="col-12">
-                <label for="address" class="form-label"></label>
-                <input
-                  id="address"
-                  name="address"
-                  class="form-control form-control-lg"
-                  type="text"
-                  placeholder="Job Site Address"
-                  required
-                >
-              </div>
+            <textarea class="form-control"
+                      id="additional-info"
+                      rows="4"
+                      placeholder="Describe the services you need..."></textarea>
+        </div>
 
-              <!-- Details -->
-              <div class="col-12">
-                <label for="details" class="form-label"></label>
-                <textarea
-                  id="details"
-                  name="details"
-                  class="form-control"
-                  rows="6"
-                  placeholder="Type your message here"
-                  required
-                ></textarea>
-              </div>
-
-              <!-- Button -->
-
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-lg">
-                    Submit
-                  </button>
-                </div>
-
-
+        <!-- Submit -->
+         <div class="text-center">
+        <button type="submit" class="btn btn-primary" id="contact-btn">
+         Submit
+        </button>
+        </div>
             </form>
-
-          </div>
-        </div>
+      </div>
       </div>
     </div>
-  </div>
+</div>
 </section>
-   <script src="navbar.js"></script>
+           
+
+<script src="navbar.js"></script>
 </body>
-<footer class="text-center p-3">
-  <p class="mb-1">2026 Keystone Pressure Washing©</p>
-  <p class="mb-1">KeystonePressureWashing@outlook.com</p>
-  <p class="mb-0">(570)574-0054</p>
-</footer>
+<script src="contact.js"></script>
+<script src="script.js"></script>
+<div id="footer"></div>
+<script src="footer.js"></script>
+
