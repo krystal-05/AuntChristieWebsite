@@ -336,8 +336,8 @@
 
   padding: 0 0.5rem 0.5rem;
 }
-/* 
-.services-section .row > div {
+
+/* .services-section .row > div {
   flex: 0 0 85%;
   max-width: 85%;
   scroll-snap-align: center;
@@ -724,7 +724,20 @@ footer {
   }
 }
 
+@media (max-width: 576px) {
+  .services-section .row {
+    flex-wrap: wrap;
+    justify-content: center !important;
 
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .services-section .row > div {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
 /* ==================================================
    DESKTOP SERVICE CARD LAYOUT
 ================================================== */
@@ -738,10 +751,7 @@ footer {
     scroll-snap-type: none;
   }
 
-  /* .services-section .row > div {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  } */
+  
 }
 
 @media (min-width: 768px){
