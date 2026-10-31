@@ -264,7 +264,7 @@
 }
 
 .services-bg .card {
-    height: auto;
+    height: 100%;
 }
 .services-section {
   overflow: hidden;
@@ -273,7 +273,7 @@
 
 .services-section .card {
   background-color: #f7f9fc;
-  height: auto;
+  height: 100%;
 }
 
 .services {
