@@ -725,13 +725,6 @@ footer {
 }
 
 @media (max-width: 576px) {
-  .services-section .row {
-    flex-wrap: wrap;
-    justify-content: center !important;
-
-    overflow-x: visible;
-    scroll-snap-type: none;
-  }
 
   .services-section .row > div {
     flex: 0 0 33.333%;
