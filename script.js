@@ -1,5 +1,4 @@
-
-
+//slideshow on home page
 const carousel = new bootstrap.Carousel('#carouselExampleRide', {
     interval: 5000,
     ride: 'carousel',

@@ -1,9 +1,8 @@
 // contact button
+//const form = document.getElementById("contact-form");
 document.getElementById("contact-form").addEventListener("submit", function(event) {
 
     event.preventDefault();
-
-    alert("Button clicked!");
 
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
@@ -28,4 +27,6 @@ Thank you!`;
 
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+    const form = document.getElementById("contact-form");
+    form.reset();
 });
