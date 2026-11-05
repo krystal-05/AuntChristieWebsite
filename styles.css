@@ -482,6 +482,12 @@
   background-color: #f3de96;
 }
 
+.card-img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
 
 /* ==================================================
    BUYING AND SELLING SECTION
@@ -514,9 +520,10 @@
 }
 
 .commercial-img {
-    max-height: 600px;
     width: 100%;
-    object-fit: contain;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .storefront{
